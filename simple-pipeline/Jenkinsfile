@@ -29,14 +29,14 @@ pipeline {
         // TODO: ADD AN APPROVAL STAGE
         stage('stage 2') {
            steps {
-               sh 'echhhhhhhhhhhhhhhhhho hello from stage 2!'
+               sh 'echo hello from stage 2!'
                  }
           }
 
           stage ('manual approval') {
              steps{
                 timeout(time: 60, unit: 'MINUTES'){
-                   input measssssssssssage: "MOVE TO STAGE 3?"
+                   input message: "MOVE TO STAGE 3?"
                   }
               }
            }
